@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clos Marsault</title>
+
+        <!-- Maintenant qu'on a mis notre ADN on va pouvoir appeler ces icones et le navigateur va comprendre  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+    <!-- Il faut que index.html  connait le fichier css , pour cela   -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header>
+        <nav>
+         <ul>
+             <li id="logo"><a href="#"> Clos Marsault</a></li>
+             <li ><a href="#langue"> Langue </a></li>
+             <li><a href="#reserve"> Réserser </a></li>
+             <li><a href="#contact"> Nous contacter </a></li>
+         </ul>   
+        </nav>
+        <!-- l'image pricipale et son texte  -->
+        <div id="imagePrincipale">
+            <h1> Clos Marsault</h1>
+            <div id="premierTrait">
+                <h3> Chambres d'hotes</h3>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Le header est fini , on va passer sur les sections -->
+    <section id="presentation">
+        <div id="textIntro">
+            <h2> Un lieu unique, pour un séjour unique </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At debitis placeat unde, possimus facere aperiam officiis veritatis nihil minima consequatur quis velit! Dignissimos, necessitatibus unde ipsam molestias minima repellendus quo nihil! Accusamus officia placeat facilis, eligendi dignissimos atque rem, saepe quidem quisquam ad non minus facere, nostrum voluptates asperiores expedita? Soluta dolorem dicta voluptate numquam, maiores ex, magnam quidem atque ipsa natus facere nesciunt est ipsam! Placeat maiores harum quidem voluptas laboriosam ab quibusdam, quisquam cumque exercitationem eveniet aut quasi?
+            </p>
+        </div>
+<!-- Là on va intégrer des photo (image) -->
+<div id="Prestations">
+    <div class="imagesPrestations">
+        <h4> Nous trouver </h4>
+        <a href="#"> <img src="media/carte.JPG" alt="carte"> </a>
+    </div>
+
+    <div class="imagesPrestations">
+        <h4> Coté Chambres </h4>
+        <a href="#"> <img src="media/chambre.JPG" alt="chambre"> </a>
+    </div>
+
+    <div class="imagesPrestations">
+        <h4> Coté cuisine </h4>
+        <a href="#"> <img src="media/repas.JPG" alt="repas"> </a>
+    </div>
+
+</div>
+    </section>
+    <!-- Nouvelle section -->
+    <section id="tourisme">
+        <h2> Et tant à découvrir...</h2>
+        <ul>
+            <li id="ocean"> <p> L'océan Atlantique </p></li>
+            <li id="chateau"> <p> Les chateaux du Médoc  </p></li>
+            <li id="phare"> <p> L'estuaire de la Gironde </p></li>
+            <li id="vignoble"> <p> Le vignoble Bordelais </p></li>
+        </ul>
+    </section>
+
+    <footer>
+<!-- Le formulaire de contacct , ici on va le mettre dans le footer -->
+<!-- Au niveau du <h2> on veut montrer ce qui dans l'onglet contact  -->
+    <!-- c'est pour cela qu'on a ajouter  id="contact" sur le titre  -->
+<h2 id="contact"> Contacter-nous </h2>
+<form >
+    <input placeholder="Nom" >
+    <input placeholder="E-mail">
+    <textarea placeholder="Votre message ici..."></textarea>
+    <button> Envoyer</button>
+</form>
+
+<div id="deuxiemeTrait"></div>
+<div id="copyrightEtIcons">
+    <div id="copyright">
+        <!-- pour le copyright on va faire : alt+0169 -->
+        <span>© fromScratch(); 2020 </span>
+        <div id="icons">
+            <!-- https://www.codegrepper.com/code-examples/html/font-awesome+-+cdnjs.com+-+The+best+FOSS+CDN+for+web -->
+            <!-- Là on a choisi la version 4.7.0 -->
+            <!-- du coup en haut de la page on va se créer un link -->
+            <a href="http://www.twitter.fr"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.facebook.fr"><i class="fa fa-facebook"></i></a>
+            <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            
+        </div>
+    </div>
+</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* Pour choisir des polices , on va se rendre dans le site */
+/* https://fonts.google.com/ */
+/* 1/ Là on a choisi deux polices : Advent pro et Dancing script */
+/* Une fois choisir ces polices, on va cliquer sur import, copier lien et ensuite l'importer sur le fichier css ( Il faut faire ALT+Z) pour aller à la ligne */
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Dancing+Script&display=swap');
+
+/* Si par exemple on est en bas d'une page et qu'on veut remonter en haut de la page  */
+html {
+    scroll-behavior: smooth;
+}
+/* ensuite pour les mettre où on veut, dans les balises que l'on veut , il faudra faudra faire font familly advent pro, ou bien font-familly-dancing-script */
+
+/* Ensuite on va mettre des règles pour le body */
+body {
+   font-family: 'Advent Pro', sans-serif; 
+   /* pour définir les écart de remplissage sur les 4 cotés d'un élément */
+   padding: 0;
+   /* pour définir la taille des marges sur les 4 cotés d'un élément */
+   margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /* pour dire qu'on veut pas de style pour les <li> */
+    /* Et les grands points vont disparaitre */
+    list-style-type: none;
+}
+
+h2 {
+    /* pour tous les h2 du documents on va les mettres en majuscule */
+    text-transform:uppercase ;
+    /* Et pour les centrer */
+    text-align: center;
+    /* La propriété (padding-top) d'un élément ajuste la hauteur de la boîte de remplissage (padding) en haut de l'élément */
+    padding-top: 30px;
+    /* Pour mettre la taille du texte */
+    font-size: 2em;
+}
+
+a {
+   /* pour tous liens du documents : */
+   /* on ne veut pas que ce soit décorer  */
+   text-decoration: none;
+   /* la couleur  */
+   color: black;
+}
+
+/* Donc voilà, on a donc donner toutes nos instructions gérérales  */
+
+/* 1°) On va commencer par la partie (nav) */
+/* ******************************NAVBAR******************************* */
+/* vue qu'on est sur la partie header , on va mettre :  */
+nav {
+    /* pour gérer le dépassement du contenu d'un élément */
+overflow: hidden;
+/* la couleur pour l'arrière plan d'un élément */
+background-color: bisque;
+/* Pour avoir une position fixe (des éléments qui ne bougent pas ) */
+position: fixed;
+/* pour définir la largeur */
+width: 100%;
+/* pour définir la transparence d'un élément (degré de visibility) */
+opacity: 0.9;
+}
+
+/* les li qui sont de header */
+header li {
+/* pour flotter à droite  */
+float: right;
+font-size: 1.2em;
+}
+
+header li a {
+    text-decoration: none;
+    /* (display):le type d'affichage utiliser pour le rendu d'un élément */
+   display: block; 
+   text-align: center;
+   /* le 1e veut dire en haut et en bas et le 2em veut dire à droite et à gauche */
+   padding: 18px 16px;
+}
+
+#logo {
+    font-family: 'Dancing Script', cursive;
+    /* pour définir l'affichage des caractères épais ou fins dans le texte */
+    font-weight: bold;
+    /* pour flotter à gauche */
+    float: left;
+}
+
+/* ***********************************IMAGE PRINCIPALE********************************* */
+
+/* Du coup si on veut toucher l'image principale */
+#imagePrincipale {
+  padding-top: 60px; 
+  /* Cette image , pour n'est pas défini sur le index.html , On a juste mis son titre */
+  /* background: no-repeat : pour définir la foçon dont les images utilisées en arrière plan sont répétées; */
+  background: url(media/image-principale.JPG) no-repeat fixed 50% 50%;
+  /* pour définir la taille des images de l'arrière plan pour l'élément */
+  background-size: cover; 
+  /* pour définir la longueur; */
+  height: 790px;
+}
+
+h1 {
+ font-family: 'Dancing Script', cursive;
+ text-align: center;   
+ color: antiquewhite;
+ font-size: 6em;
+ margin-top: 100px;
+ /* pour définir une autre couleur derrière l'écriture */
+ /* text-shadow: 1px 3px 2px orange; */
+ /* Dans le site (text shadow generate) : On peut définir le shadow */
+ /* https://html-css-js.com/css/generator/text-shadow/ */
+ text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27, 21px -23px 16px rgba(206,89,55,0.54);
+}
+
+#premierTrait {
+height: 2px;
+width: 400px;
+ margin: -3px auto;  
+ background-color: #fffae1;
+ /* text-shadow: 1px 3px 2px orange; */
+ text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27, 21px -23px 16px rgba(206,89,55,0.54);
+}
+
+h3 {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 3em;
+    /* text-shadow: 1px 3px 2px orange; */
+    text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27, 21px -23px 16px rgba(206,89,55,0.54);
+}
+
+/* *****************************************PRESENTATION**************************************** */
+#presentation {
+    background-color: #fffae1 ;
+    padding: 10px 0px 100px 0;
+}
+
+#textIntro {
+    padding: 0px 20%;
+}
+#Prestations {
+    /* pour aligner un texte et son image(ou...)*/
+    display: flex ;
+    /* pour indiquer si les éléments flexibles sont contraits à etre disposer sur une  */
+    /* ou plusieurs lignes  */
+    /* flex-wrap: wrap; */
+    /* La première méthode ne marche pas du coup je vais essai la deuxière  */
+    /*  la dexième marche bien mais on veut faiire un racourcis */
+    /* flex-direction: row; */
+    /* on a fait un racourci pour avoir une seule ligne */
+    flex-flow: row wrap;
+    /* pour indiquer l'espace dont les éléments doivent étre répartis */
+    /* et le space-between : ça répartie tous nos éléments sur toute larleur (nos photos)*/
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+/* Maintenant on va appeler les classes de la prestations  */
+/* Et pour apeler une classe, on ne doit pas faire un (#) mais un (.) */
+.imagesPrestations h4 {
+font-family: 'Dancing Script', cursive;
+text-align: center;
+font-size: 1.8em;
+margin: 15px;
+font-weight: 300;
+}
+
+.imagesPrestations img {
+ border-radius: 10px;
+ /* Pour manipuler la forme de nos images  */
+ /* https://html-css-js.com/css/generator/box-shadow/ */
+box-shadow: -36px 35px 6px -30px rgba(0,0,0,0.42); 
+}
+/* Pour donner des manière de clique à nos images, on utilise {img:hover} */
+.imagesPrestations img:hover {
+    /* pour définir son opacity  */
+    opacity: 0.5;
+    /* transform l'image quand on clique dessus (ça s'agrandit) */
+    transform: scale(1.05);
+    /* pour définir les secondes de l'agrandisement de l'image (à ne pas oublier ) */
+    transition: 0.6s ease-in-out;
+}
+
+
+/* ****************************************************TOURISME******************************************************** */
+#tourisme {
+    height: 1400px;
+    background-color: #f1f2f6;
+    padding: 1px 2%;
+}
+
+#tourisme h2 {
+    padding-top: 60px;
+}
+
+#ocean {
+  background: url(media/ocean.jpg);  
+}
+
+#chateau {
+  background: url(media/chateau.JPG);  
+}
+
+#phare {
+  background: url(media/phare.JPG);  
+}
+
+#vignoble {
+  background: url(media/vignes.jpg);  
+}
+
+/* Maintenant on doit styliser de nos li  */
+#tourisme li {
+    margin: 65px 100px 0 100px;
+    height: 226px;
+    width: 55%;
+    /* Pour définir la largeur maximale d'un élément donneé */
+    max-width: 550px;
+    float: left;
+    box-shadow: -36px 35px 6px -30px rgba(0,0,0,0.42); ;
+}
+
+#tourisme p {
+    height: 45px;
+    width: 235px;
+    background-color: #01df74;
+    float: right;
+    margin: 50px -100px 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 4px 4px 0 1px rgba(90,161,43,1);
+}
+
+/* Pour faire croisé nos images  */
+#tourisme #chateau , #tourisme #vignoble {
+    float: right;
+}
+
+/* Pour mettre leur titre à gauche et changer de couleur  */
+#chateau p, #vignoble p {
+    float: left;
+    background-color: cyan;
+    margin-left: -100px;
+    box-shadow: -4px 4px 0 1px rgba(15,154,156,1);
+}
+
+/* **********************************************FOOTER************************************ */
+footer {
+    background-color: #524a3a;
+    color: #fffae1;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+form {
+    margin:0 auto;
+    max-width: 900px;
+}
+
+input, textarea, button {
+  border: none;  
+  width: 55%;
+  padding: 15px 10px;
+  margin: 1px 0;
+  font-size: 1.2em;
+  font-family: 'Advent Pro', sans-serif;
+  border-radius: 8px;
+}
+
+textarea {
+  height: 120px;  
+}
+
+button {
+    font-size: 1.5em;
+    background-color: #fffae1;
+}
+
+/* on va donner un style au bouton */
+button:hover {
+background-color: #e55039;
+color: #fffae1;
+/* pour pointer sur l'élément en montrant ça couleur */
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+#deuxiemeTrait {
+    height: 1px;
+    width: 75%;
+    background-color: #fffae1;
+    margin: 60px auto;
+}
+
+#copyrightEtIcons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+
+#copyright {
+    width: 50%;
+    text-align: left;
+    color: #fffae1;
+}
+
+#icons {
+    width: 50%;
+    text-align: right;
+    
+}
+
+#icons a {
+  display: inline-block;  
+  margin: 0 15px;
+  font-size: 1.3em;
+  color: #fffae1;
+}
+
+#icons a:hover {
+    transform: scale(1.5);
+    transform: 0.1s;
+}
+
+
+
+
+
